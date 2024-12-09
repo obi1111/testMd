@@ -11,13 +11,12 @@
 
 ### 1.‰æ‘œ‚ğÚ‚¹‚é
 ‚±‚±«  
-`  
-`  
-`  
-`  
+![kotoshi_kanji_2021_kin](https://github.com/obi1111/testMd/blob/main/image/kotoshi_kanji_2021_kin/kotoshi_kanji_2021_kin.png?raw=true)  
 
-
-
+`  
+`  
+`  
+`  
 
 ```mermaid
 %%{init:{'theme':'natural'}}%%
@@ -37,3 +36,8 @@ autonumber
 ```
 
 ### 2.‰æ‘œ‚ğÚ‚¹‚é
+
+![](https://github.com/obi1111/testMd/blob/main/image/text_company_shigoto_hajime_osame/text_company_shigoto_hajime_osame.jpg?raw=true)  
+
+![](https://github.com/obi1111/testMd/blob/main/image/thumbnail_work_shigoto_osame/thumbnail_work_shigoto_osame.jpg?raw=true)  
+
