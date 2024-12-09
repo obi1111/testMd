@@ -1,0 +1,69 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: kenichirokimura/md2pdf:latest
+      options: --cpus 1
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Git config
+        run: git config --local core.quotepath false
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+      - name: Md2pdf
+        run: /usr/bin/md2pdf.sh ${{ steps.changed-files.outputs.all_modified_files }}
+      - name: Get Today's Date
+        id: date
+        run: |
+          echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: Create Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # 今日の日付を取得
+          date=${{ steps.date.outputs.date }}
+
+          # 最後のコミットユーザーをpushするユーザとして指定する
+          git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+
+          # 既存のタグを検索
+          existing_tag=$(git tag -l | grep $date || true)
+
+          # タグを追加
+          if [ -z "$existing_tag" ]; then
+            git tag -a $date -m "Release for $date"
+            git push origin $date
+          fi
+
+          # 既存のリリースを検索
+          existing_release=$(gh release list | grep $date || true)
+
+          if [ -z "$existing_release" ]; then
+            # 既存のリリースが存在しない場合、新しいリリースを作成
+            gh release create $date --target master --notes "Release for $date"
+          fi
+      - name: Gets latest created release info
+        id: latest_release_info
+        uses: jossef/action-latest-release-info@v1.1.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: WebFreak001/deploy-nightly@v1.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.latest_release_info.outputs.upload_url }}
+          release_id: ${{ steps.latest_release_info.outputs.id }}
+          asset_path: ./docs.tgz
+          asset_name: docs-$$.tgz
+          asset_content_type: application/x-gzip
