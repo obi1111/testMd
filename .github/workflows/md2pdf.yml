@@ -24,7 +24,7 @@ on:
 
   push:
     paths:
-      - '.github/workflows/GeneratePDF.yaml'
+      - '.github/workflows/md2pdf.yaml'
       - '.md-pdf/**'
       - 'docs/**'
 
