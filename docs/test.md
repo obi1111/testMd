@@ -1,40 +1,40 @@
-# #9�V�X�e���݌v���̃o�[�W�����Ǘ��@�̊m��
+# #9システム設計書のバージョン管理法の確立
 
-Excel�ȊO�Ő݌v�����쐬�A�Ǘ��������B
+Excel以外で設計書を作成、管理したい。
 
-## ���g�ޓ��e
+## 取り組む内容
 
-- [#9�V�X�e���݌v���̃o�[�W�����Ǘ��@�̊m��](#9�V�X�e���݌v���̃o�[�W�����Ǘ��@�̊m��)
-  - [���g�ޓ��e](#���g�ޓ��e)
-    - [1.Excel�ɕς��V���Ȑ݌v���쐬��i�̓���](#1excel�ɕς��V���Ȑ݌v���쐬��i�̓���)
+- [#9システム設計書のバージョン管理法の確立](#9システム設計書のバージョン管理法の確立)
+  - [取り組む内容](#取り組む内容)
+    - [1.Excelに変わる新たな設計書作成手段の導入](#1excelに変わる新たな設計書作成手段の導入)
 
-### 1.Excel�ɕς��V���Ȑ݌v���쐬��i�̓���
+### 1.Excelに変わる新たな設計書作成手段の導入
 
-�����b�g
+メリット
 
-- �e�L�X�g�Ȃ̂Ōy��
-- Git���Ńo�[�W�����Ǘ����s����
-- �ύX�����������Ƃ��Ďc�����Ƃ��ł���
-- �V�[�P���X�}�Ȃǂ��ȒP�ɂ��ꂢ�ɋL�q�ł���
-- �����ڂ����ꂢ
-- html, pdf, docx�t�@�C���ȂǑ��`���ւ̕ϊ����\
-- ���Ɉˑ����Ȃ��iOffice�������Ă��g����j
+- テキストなので軽い
+- Git等でバージョン管理が行える
+- 変更履歴を差分として残すことができる
+- シーケンス図などが簡単にきれいに記述できる
+- 見た目がきれい
+- html, pdf, docxファイルなど他形式への変換が可能
+- 環境に依存しない（Officeが無くても使える）
 
-�f�����b�g
+デメリット
 
-- �\�̍쐬�����ɂ����@ �� VS Code����Excel�̕\���R�s�y�ŊȒP�ɍ���  ([�Q�l](https://dev.classmethod.jp/articles/excel-to-markdown-table/))
-- �摜��URL�w�肷��K�v������ �� �������A�C���Ɏ�Ԃ������肻��  
-  ([�Q�l�FGitHub�ŉ摜���Ǘ�������@](https://for-spring.com/computer/github-6/))&nbsp;  
+- 表の作成がしにくい　 → VS CodeだとExcelの表をコピペで簡単に作れる  ([参考](https://dev.classmethod.jp/articles/excel-to-markdown-table/))
+- 画像をURL指定する必要がある → 調査中、修正に手間がかかりそう  
+  ([参考：GitHubで画像を管理する方法](https://for-spring.com/computer/github-6/))&nbsp;  
   
-�G�N�Z���A���[�h�Ƃ̔�r
+エクセル、ワードとの比較
 
-| �V�[�� | �G�N�Z��, ���[�h�̎d�l�� | �}�[�N�_�E���d�l�� |
+| シーン | エクセル, ワードの仕様書 | マークダウン仕様書 |
 | --- | --- | --- |
-| ���� | �Ƃ��c�[�������邪�g�����肪���� | Git diff�ŕύX�ӏ������m |
-| �C���_�̎w�E | �w�E���X�g�̃G�N�Z���Ȃǂ����A�S�����C�����A�ēx�m�F���s���Ă���B| GitHub�𗘗p����΃v�����N�G�X�g�ő�O�҂��e�ՂɏC����Ă��ł��A�}�[�W���I���������_�ŏC�����������A�ēx�m�F������K�v���Ȃ��B|
-| �\�쐬 | �G�N�Z�����g���₷�� | �G�N�Z���ɂ͏��ĂȂ����A�G�N�Z���̕\����ϊ��\�Bcvs�t�@�C�����ǂݍ��݉\�B |
-| �ύX�Ǘ� | �ύX�Ǘ��y�[�W��݂��L�ڂ��邽�߁A�ύX�L�^�ɔ����R�ꂪ��������B�킴�킴�C���ӏ���Ԏ��ɂ��Ă���B | �o�[�W�����Ǘ��c�[���Ƀ��O�Ƃ��Ďc�邽�ߖ��m |
-| �d�l���Q�� | �Z�p�I�ɂ͉\(�n�C�p�[�����N�@�\)�����^�p����Ă��Ȃ����߁A���񕶏����J�������A�Y���ӏ���T���Ă��� | ���݂Ƀ����N��\�邱�Ƃ�������O�ɂȂ��Ă��āA���̉ӏ��������Ɍ����� |
+| 差分 | とれるツールもあるが使い勝手が悪い | Git diffで変更箇所が明確 |
+| 修正点の指摘 | 指摘リストのエクセルなどを作り、担当が修正し、再度確認を行っている。| GitHubを利用すればプルリクエストで第三者も容易に修正提案ができ、マージを終了した時点で修正が完了し、再度確認をする必要もない。|
+| 表作成 | エクセルが使いやすい | エクセルには勝てないが、エクセルの表から変換可能。cvsファイルも読み込み可能。 |
+| 変更管理 | 変更管理ページを設け記載するため、変更記録に抜け漏れが発生する。わざわざ修正箇所を赤字にしている。 | バージョン管理ツールにログとして残るため明確 |
+| 仕様書参照 | 技術的には可能(ハイパーリンク機能)だが運用されていないため、毎回文書を開き直し、該当箇所を探している | 相互にリンクを貼ることが当たり前になっていて、問題の箇所がすぐに見られる |
 
 &nbsp;  
 
@@ -42,17 +42,17 @@ Excel�ȊO�Ő݌v�����쐬�A�Ǘ��������B
 %%{init:{'theme':'natural'}}%%
 sequenceDiagram
 autonumber
-  ���[�U    ->> +Vue         : ���O�C���{�^���N���b�N
-  Vue      ->> +Laravel     : ���O�C��API
+  ユーザ    ->> +Vue         : ログインボタンクリック
+  Vue      ->> +Laravel     : ログインAPI
   Laravel  ->> +Database    : SQL
-    Note right of Database  : �F�؃e�[�u���Q��
+    Note right of Database  : 認証テーブル参照
   Database ->> -Laravel     : Result
-  alt ���O�C������
+  alt ログイン成功
     Laravel ->> Vue         : success
-  else ���s
+  else 失敗
     Laravel ->> -Vue        : failure
   end
-  Vue       ->> -���[�U      : ���ʕ\��
+  Vue       ->> -ユーザ      : 結果表示
 ```
 
-�}1
+図1a

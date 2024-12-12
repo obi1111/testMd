@@ -1,44 +1,44 @@
-# ‰æ‘œƒeƒXƒg—p
+# ç”»åƒãƒ†ã‚¹ãƒˆç”¨
 
-```
+ã€œã€œã€œ
 
-## –ÚŸ
+## ç›®æ¬¡
 
-- [‰æ‘œƒeƒXƒg](#‰æ‘œƒeƒXƒg—p)
-  - [–ÚŸ](#–ÚŸ)
-    - [1.‰æ‘œ](#1.‰æ‘œ‚ğÚ‚¹‚é)
-    - [2.‰æ‘œ](#2.‰æ‘œ‚ğÚ‚¹‚é)
+- [ç”»åƒãƒ†ã‚¹ãƒˆ](#ç”»åƒãƒ†ã‚¹ãƒˆç”¨)
+  - [ç›®æ¬¡](#ç›®æ¬¡)
+    - [1.ç”»åƒ](#1.ç”»åƒã‚’è¼‰ã›ã‚‹)
+    - [2.ç”»åƒ](#2.ç”»åƒã‚’è¼‰ã›ã‚‹)
 
-### 1.‰æ‘œ‚ğÚ‚¹‚é
-‚±‚±«  
+### 1.ç”»åƒã‚’è¼‰ã›ã‚‹
+ã“ã“â†“  
 ![kotoshi_kanji_2021_kin](https://github.com/obi1111/testMd/blob/main/image/kotoshi_kanji_2021_kin/kotoshi_kanji_2021_kin.png?raw=true)  
 
-`  
-`  
-`  
-`  
+ã€œ  
+ã€œ  
+ã€œ  
+ã€œ  
 
 ```mermaid
 %%{init:{'theme':'natural'}}%%
 sequenceDiagram
 autonumber
-  ƒ†[ƒU    ->> +Vue         : ƒƒOƒCƒ“ƒ{ƒ^ƒ“ƒNƒŠƒbƒN
-  Vue      ->> +Laravel     : ƒƒOƒCƒ“API
+  ãƒ¦ãƒ¼ã‚¶    ->> +Vue         : ãƒ­ã‚°ã‚¤ãƒ³ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯
+  Vue      ->> +Laravel     : ãƒ­ã‚°ã‚¤ãƒ³API
   Laravel  ->> +Database    : SQL
-    Note right of Database  : ”FØƒe[ƒuƒ‹QÆ
+    Note right of Database  : èªè¨¼ãƒ†ãƒ¼ãƒ–ãƒ«å‚ç…§
   Database ->> -Laravel     : Result
-  alt ƒƒOƒCƒ“¬Œ÷
+  alt ãƒ­ã‚°ã‚¤ãƒ³æˆåŠŸ
     Laravel ->> Vue         : success
-  else ¸”s
+  else å¤±æ•—
     Laravel ->> -Vue        : failure
   end
-  Vue       ->> -ƒ†[ƒU      : Œ‹‰Ê•\¦
+  Vue       ->> -ãƒ¦ãƒ¼ã‚¶      : çµæœè¡¨ç¤º
 ```
 
-### 2.‰æ‘œ‚ğÚ‚¹‚é
+### 2.ç”»åƒã‚’è¼‰ã›ã‚‹
 
 ![](https://github.com/obi1111/testMd/blob/main/image/text_company_shigoto_hajime_osame/text_company_shigoto_hajime_osame.jpg?raw=true)  
 
 ![](https://github.com/obi1111/testMd/blob/main/image/thumbnail_work_shigoto_osame/thumbnail_work_shigoto_osame.jpg?raw=true)  
 
-test
+testa
