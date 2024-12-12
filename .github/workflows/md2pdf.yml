@@ -13,7 +13,7 @@ on:
   workflow_call:
     inputs:
       source-directory:
-        default: './docs'
+        default: './document-test'
         type: string
       output-directory:
         default: './dist'
@@ -30,7 +30,7 @@ on:
 
 env:
   TZ: Asia/Tokyo
-  SOURCE_DIRECTORY: ${{ inputs.source-directory || './docs' }}
+  SOURCE_DIRECTORY: ${{ inputs.source-directory || './document-test' }}
   OUTPUT_DIRECTORY: ${{ inputs.output-directory || './dist' }}
   NESTED_OUTPUT_DIRECTORY: ${{ inputs.output-directory || './dist' }}${{ inputs.is-nest && '/**' }}
 
