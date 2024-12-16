@@ -53,8 +53,8 @@ jobs:
 
       - name: 📝 Generate PDF
         run: |
-          chmod +x ./.md-pdf/md-to-pdf.sh
-          ./.md-pdf/md-to-pdf.sh
+          shopt -s globstar
+          npx md-to-pdf-ng ${{ env.NESTED_OUTPUT_DIRECTORY }}/image_test1.md
 
       - name: 🗑 Remove markdown files
         run: |
