@@ -53,7 +53,7 @@ jobs:
 
       - name: 📝 Generate PDF
         run: |
-          npx md-to-pdf-ng ${{ env.NESTED_OUTPUT_DIRECTORY }}/image_test1.md
+          ./.md-pdf/md-to-pdf.sh
 
       - name: 🗑 Remove markdown files
         run: |
