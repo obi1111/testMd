@@ -19,10 +19,11 @@
 ～  
 ～  
 
+mermaid
+
 ```mermaid
 %%{init:{'theme':'natural'}}%%
 sequenceDiagram
-autonumber
   ユーザ    ->> +Vue         : ログインボタンクリック
   Vue      ->> +Laravel     : ログインAPI
   Laravel  ->> +Database    : SQL
