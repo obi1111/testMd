@@ -53,6 +53,7 @@ jobs:
 
       - name: 📝 Generate PDF
         run: |
+          chmod +x ./.md-pdf/md-to-pdf.sh
           ./.md-pdf/md-to-pdf.sh
 
       - name: 🗑 Remove markdown files
