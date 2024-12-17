@@ -14,11 +14,13 @@
 ここ↓  
 ![kotoshi_kanji_2021_kin](https://github.com/obi1111/testMd/blob/main/image/kotoshi_kanji_2021_kin/kotoshi_kanji_2021_kin.png?raw=true)  
 
-<img src = "https://github.com/obi1111/testMd/blob/main/image/test.drawio.svg?raw=true">
-
 ![drawio_test](https://github.com/obi1111/testMd/blob/main/image/test.drawio.svg?raw=true)
 
 ![draw_test](https://raw.githubusercontent.com/obi1111/testMd/refs/heads/main/image/test.drawio.svg)
+
+![drawio_test2](https://github.com/obi1111/testMd/blob/main/image/test2.drawio.svg?raw=true)
+
+![draw_test2](https://raw.githubusercontent.com/obi1111/testMd/refs/heads/main/image/test2.drawio.svg)
 
 ～  
 ～  
