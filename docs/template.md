@@ -68,8 +68,9 @@
 
 <style>
 .table table {
-    margin-left:50px;
+    margin-left:30px;
     margin-right:0px;
     font-size: 75%
+    table-layout: fixed;
 }
 </style>
