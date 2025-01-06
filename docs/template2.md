@@ -105,5 +105,6 @@ SO出力時に使用するバリデーションチェック条件の新規登録
 <style>
 .table table {
     width : 100%;
+    font-size : 75%;
 }
 </style>
