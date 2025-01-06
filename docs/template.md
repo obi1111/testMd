@@ -103,7 +103,7 @@ SO出力時に使用するバリデーションチェック条件の新規登録
 | ✕✕案件 | 2024/6/1   | 小尾渉太 | 修正(#2.1,#2.3,#4) |   yyyy/mm/dd  |   〇〇〇〇  |    |
 
 <style>
-.table table {
+.table {
 
     font-size: 75%
     table-layout: fixed;
