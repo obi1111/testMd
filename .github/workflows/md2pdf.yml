@@ -37,7 +37,7 @@ env:
 
 jobs:
   generate-pdf:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04 #latestにすると動作しなくなる
     steps:
       - uses: actions/checkout@v2
 
